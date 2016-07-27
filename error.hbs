@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <style>
+        body{
+            background: #000;
+            padding-top: 10px;
+        }
+
+        p{
+            color: white;
+            font-family: "Courier";
+            font-size: 20px;
+            margin: 10px 0 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 30em;
+            animation: type 4s steps(60, end);
+        }
+
+        p:nth-child(2){
+            animation: type2 8s steps(60, end);
+        }
+
+        p a{
+            color: white;
+            text-decoration: none;
+        }
+
+        span{
+            animation: blink 1s infinite;
+        }
+
+        @keyframes type{
+            from { width: 0; }
+        }
+
+        @keyframes type2{
+            0%{width: 0;}
+            50%{width: 0;}
+            100%{ width: 100; }
+        }
+
+        @keyframes blink{
+            to{opacity: .0;}
+        }
+
+        ::selection{
+            background: black;
+        }
+    </style>
+    {{ghost_head}}
+</head>
+<body class="grey darken-4 {{body_class}}">
+
+<p>Ups al parecer hay un error haz click en mi nombre</p>
+<p>Herman Morales
+    <a href="javascript:window.history.back();" title="{{@blog.title}}">&laquo; Volver atrás</a>
+    XD<span>|</span></p>
+
+{{ghost_foot}}
+{{!-- Fitvids makes video embeds responsive and awesome --}}
+<script type="text/javascript" src="{{asset "js/pace.min.js"}}"></script>
+
+</body>
+</html>
