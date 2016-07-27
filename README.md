@@ -1,0 +1,2 @@
+# bloguito
+theme for ghost 
